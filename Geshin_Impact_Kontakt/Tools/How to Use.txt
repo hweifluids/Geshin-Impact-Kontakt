@@ -1,0 +1,27 @@
+Click on the Nicnt Maker
+edit the values and generate a nicnt file.
+
+Move this file in your library root folder.
+then use 
+Add Library tool for non NKS or home made libraries
+
+
+if the size of the tool don't show normally,
+adjust your display preference scalling on 100% 
+instead of default 125% on windows laptop.
+
+
+for custom libraries, 
+all SNPID will not be showing in kontakt, 3 letters don't work well. (half on amd, not on intel)
+it is better to use 1 not used letter and 2 number.   D00 to D99, E00 to E99, etc
+it is the only joke for custom material, if you add something that is not seen in the library list.
+the nicnt and the xml in service center must match, it can use ras2 or ras3 auth mode.
+have a look to SNPID Lister to know what letter + digit you can use without conflict with official registration.
+
+
+add library tool also write the library location here (it was used for Kontakt 5)
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Native Instruments
+you can delete and clean new additions, but also oldies residual keys in case of conflict or not matching data's.
+
+Kontakt 6 & 7 only use
+HKEY_LOCAL_MACHINE\SOFTWARE\Native Instruments 

@@ -1,0 +1,110 @@
+on init
+    load_performance_view("Wingsong_Lyre_PFVIEW")
+
+    set_knob_defval($HPF_KB, 150)
+    $HPF_KB := 150
+    set_knob_defval($HoldOn, 5000)
+    $HoldOn := 5000
+
+    declare $HPF_RAW
+end on
+on note
+    message("Note Number: " & $EVENT_NOTE & " - Velocity: " & $EVENT_VELOCITY)
+end on
+on ui_control ($HoldOn)
+    message("Fading: " & $HoldOn & "mdB.")
+end on
+
+on ui_control( $HPF_KB )
+    $HPF_RAW:= int(log((real($HPF_KB)/30.0))*434250.0/1.30103)
+    set_engine_par($ENGINE_PAR_SEQ_HP_FREQ, $HPF_RAW, 0, 0, $NI_BUS_OFFSET)
+end on
+
+on ui_control($bt_C1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(36, 127, 0, 0)
+end on
+on ui_control($bt_D1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(38, 127, 0, 0)
+end on
+on ui_control($bt_E1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(40, 127, 0, 0)
+end on
+on ui_control($bt_F1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(41, 127, 0, 0)
+end on
+on ui_control($bt_G1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(43, 127, 0, 0)
+end on
+on ui_control($bt_A1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(45, 127, 0, 0)
+end on
+on ui_control($bt_B1)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(47, 127, 0, 0)
+end on
+
+
+on ui_control($bt_C2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(48, 127, 0, 0)
+end on
+on ui_control($bt_D2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(50, 127, 0, 0)
+end on
+on ui_control($bt_E2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(52, 127, 0, 0)
+end on
+on ui_control($bt_F2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(53, 127, 0, 0)
+end on
+on ui_control($bt_G2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(55, 127, 0, 0)
+end on
+on ui_control($bt_A2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(57, 127, 0, 0)
+end on
+on ui_control($bt_B2)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(59, 127, 0, 0)
+end on
+
+
+on ui_control($bt_C3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(60, 127, 0, 0)
+end on
+on ui_control($bt_D3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(62, 127, 0, 0)
+end on
+on ui_control($bt_E3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(64, 127, 0, 0)
+end on
+on ui_control($bt_F3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(65, 127, 0, 0)
+end on
+on ui_control($bt_G3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(67, 127, 0, 0)
+end on
+on ui_control($bt_A3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(69, 127, 0, 0)
+end on
+on ui_control($bt_B3)
+    change_vol($ALL_EVENTS,-$HoldOn, 2)
+    play_note(71, 127, 0, 0)
+end on
